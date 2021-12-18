@@ -343,7 +343,9 @@
           Need a developer for your next project? Let's work together.
         </p>
         <div class="custom-link">
-          <a href="/contact.html">Contact Me</a>
+          <a>
+            <router-link to="/contact">Contact Me</router-link>
+          </a>
           <span></span>
           <i></i>
         </div>
@@ -359,9 +361,9 @@
             style="visibility: visible; animation-name: fadeInUp"
           >
             <figure class="logo sticky">
-              <a href="/index.html">
+              <router-link to="/">
                 <img :src="images.imageThree" alt="Matthew Ricklefs Logo"
-              /></a>
+              /></router-link>
             </figure>
           </div>
 
@@ -383,7 +385,9 @@
           >
             <h5>Say Hello</h5>
             <address>
-              <a href="contact.html">Contact Form</a>
+              <a>
+                <router-link to="/contact">Contact</router-link>
+              </a>
             </address>
           </div>
 

@@ -335,7 +335,9 @@
           >
             <h5>Say Hello</h5>
             <address>
-              <a href="contact.html">Contact Form</a>
+              <a>
+                <router-link to="/contact">Contact</router-link>
+              </a>
             </address>
           </div>
 
@@ -345,9 +347,21 @@
           >
             <div class="sub-footer">
               <ul>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li>
+                  <a>
+                    <router-link to="/">Home</router-link>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <router-link to="/about">About</router-link>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <router-link to="/contact">Contact</router-link>
+                  </a>
+                </li>
               </ul>
 
               <span>© 2021 Matthew Ricklefs - All rights Reserved.</span>
