@@ -1,21 +1,5 @@
 <template>
   <div class="theme-switch-wrapper" data-theme="light">
-    <!-- Preloader -->
-    <!-- <div class="preloader page-loaded"> -->
-    <!-- :: before -->
-    <!-- <div class="inner">
-        <figure class="logo">
-          <img src="" alt="logo" />
-        </figure>
-        <span class="percentage">1</span>
-      </div> -->
-    <!-- ::after -->
-    <!-- </div> -->
-
-    <!-- <div class="transition-overlay"> -->
-    <!-- ::before -->
-    <!-- </div> -->
-
     <!-- Navigation -->
     <div class="navigation-menu" name="theme">
       <div class="inner">
@@ -426,13 +410,10 @@
 </template>
 
 <script>
-// @ is an alias to /src
 import "@/assets/styles.scss";
-// import WOW from "wowjs";
 
 export default {
   name: "Home",
-  components: {},
   data() {
     return {
       images: {
@@ -441,17 +422,6 @@ export default {
         imageThree: require("../assets/logo.png"),
       },
     };
-  },
-  mounted() {
-    // new WOW.WOW({
-    //   boxClass: "wow",
-    //   animateClass: "animated",
-    //   live: true,
-    //   offset: 50,
-    // })
-    //   .init()
-    //   .sync();
-    // console.log("Component mounted.");
   },
   methods: {
     toggleSwitch() {

@@ -329,15 +329,15 @@
             </address>
           </div>
 
-          <!-- <div
+          <div
             class="row-3 wow fadeInUp"
             style="visibility: visible; animation-name: fadeInUp"
           >
-            <h5>Goodbye!</h5>
+            <h5>Say Hello</h5>
             <address>
               <a href="contact.html">Contact Form</a>
             </address>
-          </div> -->
+          </div>
 
           <div
             class="row-4 wow fadeInUp"
@@ -360,13 +360,10 @@
 </template>
 
 <script>
-// @ is an alias to /src
 import "@/assets/styles.scss";
-// import WOW from "wowjs";
 
 export default {
   name: "Home",
-  components: {},
   data() {
     return {
       images: {
@@ -393,23 +390,11 @@ export default {
       },
     };
   },
-  mounted() {
-    // new WOW.WOW({
-    //   boxClass: "wow",
-    //   animateClass: "animated",
-    //   live: true,
-    //   offset: 50,
-    // })
-    //   .init()
-    //   .sync();
-    // console.log("Component mounted.");
-  },
   methods: {
     toggleSwitch() {
       const toggleSwitch = document.querySelector(
         '.theme-switch input[type="checkbox"]'
       );
-
       function switchTheme(e) {
         if (e.target.checked) {
           document.documentElement.setAttribute("data-theme", "dark");
@@ -417,7 +402,6 @@ export default {
           document.documentElement.setAttribute("data-theme", "light");
         }
       }
-
       toggleSwitch.addEventListener("change", switchTheme, false);
     },
   },

@@ -23,16 +23,11 @@
 </template>
 
 <script>
-// import Arrow from "../assets/icons/arrow-right-light.svg";
-// import Edit from "../assets/icons/edit-regular.svg";
-// import Delete from "../assets/icons/trash-regular.svg";
+
 
 export default {
   name: "Card",
   components: {
-    // Arrow,
-    // Edit,
-    // Delete,
   },
   methods: {
     deletePost() {

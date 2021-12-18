@@ -1,21 +1,5 @@
 <template>
   <div class="theme-switch-wrapper" data-theme="light">
-    <!-- Preloader -->
-    <!-- <div class="preloader page-loaded"> -->
-    <!-- :: before -->
-    <!-- <div class="inner">
-        <figure class="logo">
-          <img src="" alt="logo" />
-        </figure>
-        <span class="percentage">1</span>
-      </div> -->
-    <!-- ::after -->
-    <!-- </div> -->
-
-    <!-- <div class="transition-overlay"> -->
-    <!-- ::before -->
-    <!-- </div> -->
-
     <!-- Navigation -->
     <div class="navigation-menu" name="theme">
       <div class="inner">
@@ -83,11 +67,6 @@
                 <router-link to="/about">About</router-link>
               </a>
             </li>
-            <!-- <li>
-              <a>
-                <router-link to="/projects">Projects</router-link>
-              </a>
-            </li> -->
             <li>
               <a>
                 <router-link to="/contact">Contact</router-link>
@@ -95,60 +74,6 @@
             </li>
           </ul>
         </div>
-
-        <!-- Hamburger Icon -->
-        <!-- <div class="hamburger-menu" id="hamburger-menu">
-          <div class="burger" @click.prevent="toggleTheme">
-            <svg
-              id="burger-svg"
-              data-name="Layer 1"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 50 50"
-            >
-              <title>Show / Hide Navigation</title>
-              <rect class="burger-svg__base" width="50" height="50"></rect>
-              <g class="burger-svg__bars">
-                <rect
-                  class="burger-svg__bar burger-svg__bar-1"
-                  x="14"
-                  y="18"
-                  width="22"
-                  height="2"
-                  data-svg-origin="25 19"
-                  style="
-                    transform: matrix(1, 0, 0, 1, 0, 0);
-                    transform-origin: 0px 0px 0px;
-                  "
-                ></rect>
-                <rect
-                  class="burger-svg__bar burger-svg__bar-2"
-                  x="14"
-                  y="24"
-                  width="22"
-                  height="2"
-                  data-svg-origin="25 25"
-                  style="
-                    transform-origin: 0px 0px 0px;
-                    transform: matrix(1, 0, 0, 1, 0, 0);
-                    opacity: 1;
-                  "
-                ></rect>
-                <rect
-                  class="burger-svg__bar burger-svg__bar-3"
-                  x="14"
-                  y="30"
-                  width="22"
-                  height="2"
-                  data-svg-origin="25 31"
-                  style="
-                    transform: matrix(1, 0, 0, 1, 0, 0);
-                    transform-origin: 0px 0px 0px;
-                  "
-                ></rect>
-              </g>
-            </svg>
-          </div>
-        </div> -->
 
         <!-- Theme Switch -->
         <label class="theme-switch" for="checkbox">
@@ -259,7 +184,7 @@
     </section>
 
     <!-- Skills ----------------------------- -->
-    <section class="featured-services" data-color="dark">
+    <section class="featured-services">
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -468,9 +393,21 @@
           >
             <div class="sub-footer">
               <ul>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li>
+                  <a>
+                    <router-link to="/">Home</router-link>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <router-link to="/about">About</router-link>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <router-link to="/contact">Contact</router-link>
+                  </a>
+                </li>
               </ul>
 
               <span>© 2021 Matthew Ricklefs - All rights Reserved.</span>
@@ -483,13 +420,10 @@
 </template>
 
 <script>
-// @ is an alias to /src
 import "@/assets/styles.scss";
-// import WOW from "wowjs";
 
 export default {
   name: "Home",
-  components: {},
   data() {
     return {
       images: {
@@ -516,17 +450,7 @@ export default {
       },
     };
   },
-  mounted() {
-    // new WOW.WOW({
-    //   boxClass: "wow",
-    //   animateClass: "animated",
-    //   live: true,
-    //   offset: 50,
-    // })
-    //   .init()
-    //   .sync();
-    // console.log("Component mounted.");
-  },
+
   methods: {
     toggleSwitch() {
       const toggleSwitch = document.querySelector(
