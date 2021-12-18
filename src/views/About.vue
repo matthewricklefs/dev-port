@@ -251,14 +251,14 @@
         <ul class="about-tech">
           <li class="wow fadeInUp" data-wow-delay="0.50s">
             <figure>
-              <img :src="logos.react" width="73" alt="react logo" />
+              <img :src="logos.vue" width="73" alt="react logo" />
             </figure>
             <!-- <h5>React</h5> -->
           </li>
 
           <li class="wow fadeInUp" data-wow-delay="0.60s">
             <figure>
-              <img :src="logos.redux" height="73" alt="redux logo" />
+              <img :src="logos.react" height="73" alt="redux logo" />
             </figure>
           </li>
 
@@ -284,20 +284,21 @@
         <ul class="about-tech">
           <li class="wow fadeInUp" data-wow-delay="1s">
             <figure>
-              <img :src="logos.next" width="73" alt="next logo" />
+              <img :src="logos.nuxt" width="73" alt="next logo" />
             </figure>
           </li>
 
           <li class="wow fadeInUp" data-wow-delay="1.1s">
             <figure>
-              <img :src="logos.prisma" height="73" alt="prisma logo" />
+              <img :src="logos.next" width="73" height="73" alt="prisma logo" />
             </figure>
           </li>
 
           <li class="wow fadeInUp" data-wow-delay="1.2s">
             <figure>
               <img
-                src="https://camo.githubusercontent.com/389368863d9b9df25acd07644bad7642459c3533/68747470733a2f2f696d6775722e636f6d2f5376366a3042362e706e67"
+                class="coder"
+                :src="images.imageFour"
                 height="73"
                 alt="prisma logo"
               />
@@ -312,7 +313,7 @@
 
           <li class="wow fadeInUp" data-wow-delay="1.4s">
             <figure>
-              <img :src="logos.gatsby" width="73" alt="gatsby logo" />
+              <img :src="logos.aws" width="73" alt="gatsby logo" />
             </figure>
           </li>
         </ul>
@@ -434,17 +435,19 @@ export default {
         imageOne: require("../assets/images/matty6.jpeg"),
         imageTwo: require("../assets/images/code.jpeg"),
         imageThree: require("../assets/logo.png"),
+        imageFour: require("../assets/images/coder-zen.png"),
       },
       logos: {
         express: require("../assets/images/express-logo.png"),
-        gatsby: require("../assets/images/gatsby-logo.svg"),
+        aws: require("../assets/images/aws-logo.png"),
         graphQl: require("../assets/images/graphql-logo.svg"),
         mongo: require("../assets/images/mongodb-logo.svg"),
-        next: require("../assets/images/next-logo.svg"),
+        nuxt: require("../assets/images/nuxt.png"),
         node: require("../assets/images/node-logo.svg"),
-        prisma: require("../assets/images/prisma-logo.svg"),
+        next: require("../assets/images/next-logo.svg"),
         redux: require("../assets/images/redux-logo.svg"),
         react: require("../assets/images/react-logo.svg"),
+        vue: require("../assets/logo.png"),
       },
       icons: {
         ui: require("../assets/images/icon01.svg"),
