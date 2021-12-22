@@ -94,7 +94,7 @@
     <section class="page-header wave-section">
       <svg
         width="100%"
-        height="172"
+        height="175"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         class="wave-top"
@@ -356,12 +356,12 @@
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
-        <div class="row">
+        <div class="row-top">
           <div
-            class="row-1 wow fadeInUp"
+            class="footer-item wow fadeInUp"
             style="visibility: visible; animation-name: fadeInUp"
           >
-            <figure class="logo sticky">
+            <figure class="">
               <router-link to="/">
                 <img :src="images.imageThree" alt="Matthew Ricklefs Logo"
               /></router-link>
@@ -369,10 +369,11 @@
           </div>
 
           <div
-            class="row-2 wow fadeInUp"
+            class="footer-item wow fadeInUp"
             style="visibility: visible; animation-name: fadeInUp"
           >
             <h5>Location</h5>
+
             <address>
               Brooklyn,<br />
               New York<br />
@@ -381,42 +382,25 @@
           </div>
 
           <div
-            class="row-3 wow fadeInUp"
+            class="footer-item wow fadeInUp"
             style="visibility: visible; animation-name: fadeInUp"
           >
             <h5>Say Hello</h5>
+
             <address>
               <a>
                 <router-link to="/contact">Contact</router-link>
               </a>
             </address>
           </div>
+        </div>
 
-          <div
-            class="row-4 wow fadeInUp"
-            style="visibility: visible; animation-name: fadeInUp"
-          >
-            <div class="sub-footer">
-              <ul>
-                <li>
-                  <a>
-                    <router-link to="/">Home</router-link>
-                  </a>
-                </li>
-                <li>
-                  <a>
-                    <router-link to="/about">About</router-link>
-                  </a>
-                </li>
-                <li>
-                  <a>
-                    <router-link to="/contact">Contact</router-link>
-                  </a>
-                </li>
-              </ul>
-
-              <span>© 2021 Matthew Ricklefs - All rights Reserved.</span>
-            </div>
+        <div
+          class="row-bottom"
+          style="visibility: visible; animation-name: fadeInUp"
+        >
+          <div>
+            <address>© 2021 Matthew Ricklefs - All rights Reserved.</address>
           </div>
         </div>
       </div>
