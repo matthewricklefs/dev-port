@@ -143,7 +143,8 @@
         >
           Explore Projects
         </h2>
-        <p class="tracking-wide mb-10 font-light text-sm sm:text-xl">
+
+        <p class="tracking-wide mb-10 font-light text-xs">
           Check out some of my recent work.
         </p>
       </div>
