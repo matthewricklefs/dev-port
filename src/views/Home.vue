@@ -1,7 +1,12 @@
 <template>
-  <div class="theme-switch-wrapper" data-theme="light">
+  <div
+    class="theme-switch-wrapper xl:p-40 lg:pl-36 md:pl-32 sm:pl-24 pl-14"
+    data-theme="light"
+  >
     <!-- Sidebar -->
-    <aside class="w-36 h-screen fixed left-0 top-0 flex items-center">
+    <aside
+      class="h-screen fixed left-0 top-0 flex items-center xl:w-36 lg:w-32 md:w-24 sm:w-16 w-12"
+    >
       <a
         href=""
         class="w-full block h-10 text-center mt-8 transition-all ease-in-out opacity-0 transform translate-y-7"
@@ -52,9 +57,9 @@
           </ul>
 
           <!-- Theme Switch -->
-          <label class="theme-switch" for="checkbox">
-            <input type="checkbox" id="checkbox" />
-            <div @click="toggleSwitch" class="slider round"></div>
+          <label class="pl-5 theme-switch h-9 relative w-17" for="checkbox">
+            <input class="invisible" type="checkbox" id="checkbox" />
+            <div @click="toggleSwitch" class="slider round" />
           </label>
         </div>
       </nav>
@@ -62,7 +67,9 @@
 
     <!-- Page Title -->
     <div class="w-full mt-12">
-      <h1 class="text-6xl font-bold leading-none m-0 pb-1">
+      <h1
+        class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-none m-0 pb-1"
+      >
         Hello, I'm Matthew.
         <br />
         Full Stack Developer
@@ -128,13 +135,15 @@
     </section>
 
     <!-- Projects -->
-    <section class="h-full w-full">
+    <section class="p-12 h-full w-full pb-7">
       <!-- See All Projects.. -->
       <div class="flex flex-col items-start justify-end">
-        <h2 class="flex text-xl font-semibold tracking-normal uppercase">
+        <h2
+          class="flex font-medium tracking-normal uppercase text-lg sm:text-xl"
+        >
           Explore Projects
         </h2>
-        <p class="text-lg tracking-wide mb-10 font-light">
+        <p class="tracking-wide mb-10 font-light text-sm sm:text-xl">
           Check out some of my recent work.
         </p>
       </div>
@@ -146,12 +155,12 @@
             <!-- TODO: Insert Projects here -->
             <figure class="project-image reveal-effect masker wow">
               <a href="">
-                <img :src="images.imageTwo" alt="" />
+                <img class="rounded-l-full" :src="images.imageTwo" alt="" />
               </a>
             </figure>
 
             <div class="project-content">
-              <h3>
+              <h3 class="">
                 <a href="">Project 0</a>
               </h3>
               <small>Website for testing lorem ipsum lorem ipsum</small>
@@ -164,7 +173,7 @@
             <!-- TODO: Insert Projects here -->
             <figure class="project-image reveal-effect masker wow">
               <a href="">
-                <img :src="images.imageTwo" alt="" />
+                <img class="rounded-r-full" :src="images.imageTwo" alt="" />
               </a>
             </figure>
 
@@ -182,7 +191,7 @@
             <!-- TODO: Insert Projects here -->
             <figure class="project-image reveal-effect masker wow">
               <a href="">
-                <img :src="images.imageTwo" alt="" />
+                <img class="rounded-l-full" :src="images.imageTwo" alt="" />
               </a>
             </figure>
 
@@ -200,7 +209,7 @@
             <!-- TODO: Insert Projects here -->
             <figure class="project-image reveal-effect masker wow">
               <a href="">
-                <img :src="images.imageTwo" alt="" />
+                <img class="rounded-r-full" :src="images.imageTwo" alt="" />
               </a>
             </figure>
 
@@ -225,98 +234,64 @@
     </section>
 
     <!-- Explore Ideas -->
-    <section class="work-with-us">
+    <section class="p-12">
       <div class="container wow fadeInUp">
         <h2
-          style="
-            font-size: 18px;
-            font-weight: 600;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-          "
+          class="flex font-medium tracking-normal uppercase text-lg sm:text-xl"
         >
           EXPLORE IDEAS
         </h2>
-
-        <p
-          style="
-            font-size: 20px;
-            line-height: 1.5;
-            margin-bottom: 40px;
-            font-weight: 300;
-          "
-        >
+        <p class="tracking-wide mb-10 font-light text-sm sm:text-lg">
           Need a developer for your next project? Let's work together.
         </p>
 
-        <div class="custom-link">
-          <router-link to="/contact">Contact Me</router-link>
+        <div class="custom-link form-group">
+          <button class="rounded-lg" id="submit" type="submit" name="submit">
+            <strong class="rounded-lg">
+              <router-link to="/contact"><p>Contact Me</p></router-link>
 
-          <span></span>
-
-          <i></i>
+              <b></b>
+              <i></i>
+            </strong>
+          </button>
         </div>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="row-top">
+    <footer class="w-full md:p-24 sm:p-6 p-1">
+      <div class="flex flex-col justify-around items-center">
+        <div class="w-full flex flex-row sm:flex-row sm:justify-between">
           <div
-            class="footer-item wow fadeInUp"
+            class="w-full wow fadeInUp flex flex-col place-items-start"
             style="visibility: visible; animation-name: fadeInUp"
           >
-            <figure class="logo sticky">
-              <router-link to="/">
-                <img :src="images.imageThree" alt="Matthew Ricklefs Logo"
-              /></router-link>
-            </figure>
-          </div>
+            <h5 class="sm:text-md text-sm">Location</h5>
 
-          <div
-            class="footer-item wow fadeInUp"
-            style="visibility: visible; animation-name: fadeInUp"
-          >
-            <h5>Location</h5>
-
-            <address>
-              Brooklyn,<br />
-              New York<br />
+            <address class="sm:text-sm text-xs">
+              Brooklyn, NY<br />
               USA
             </address>
           </div>
 
           <div
-            class="footer-item wow fadeInUp"
+            class="w-full flex flex-col place-items-end"
             style="visibility: visible; animation-name: fadeInUp"
           >
-            <h5>Say Hello</h5>
+            <h5 class="wow fadeInUp sm:text-md text-sm">Say Hello</h5>
 
-            <address>
-              <a>
-                <router-link to="/contact">Contact</router-link>
-              </a>
-            </address>
+            <a class="sm:text-sm text-xs">
+              <router-link to="/contact">Contact</router-link>
+            </a>
           </div>
         </div>
 
         <div
-          class="row-bottom"
+          class="w-full flex flex-row basis-1/3 flex-wrap sm:flex-col"
           style="visibility: visible; animation-name: fadeInUp"
         >
-          <div class="wow fadeInUp">
-            <ul>
-              <li>
-                <a>
-                  <router-link to="/about">About</router-link>
-                </a>
-              </li>
-            </ul>
-          </div>
-
           <div>
-            <address>© 2021 Matthew Ricklefs - All rights Reserved.</address>
+            <address>© 2021 Matthew Ricklefs - All Rights Reserved.</address>
           </div>
         </div>
       </div>
@@ -338,7 +313,6 @@ export default {
       },
     };
   },
-
   methods: {
     toggleSwitch() {
       const toggleSwitch = document.querySelector(
@@ -356,60 +330,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss">
-.theme-switch-wrapper {
-  em {
-    margin-left: 10px;
-    font-size: 1rem;
-  }
-}
-.theme-switch {
-  height: 34px;
-  position: relative;
-  width: 60px;
-}
-
-.theme-switch input {
-  display: none;
-}
-
-.slider {
-  background-color: #607d8c;
-  bottom: 0;
-  cursor: pointer;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  transition: 0.4s;
-}
-
-.slider:before {
-  background-color: #fff;
-  bottom: 4px;
-  content: "";
-  height: 26px;
-  left: 4px;
-  position: absolute;
-  transition: 0.4s;
-  width: 26px;
-}
-
-input:checked + .slider {
-  background-color: #b3bc6d;
-}
-
-input:checked + .slider:before {
-  transform: translateX(26px);
-}
-
-.slider.round {
-  border-radius: 34px;
-  background-color: grey;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
-</style>
