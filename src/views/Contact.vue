@@ -120,86 +120,98 @@
           <!-- TODO: Implement Responsive Clean Form Submit -->
           <!-- Form -->
           <div class="wow fadeInUp p-4">
-            <div class="flex flex-col items-stretch">
+            <div class="flex flex-col items-start w-full">
               <h5
                 class="flex font-medium tracking-normal uppercase text-lg sm:text-xl"
               >
                 CONTACT FORM
               </h5>
 
-              <form id="contact" name="contact" method="post">
-                <input type="hidden" name="form-name" value="contact" />
-                <div class="form-group">
-                  <label>
-                    <input
-                      type="text"
-                      name="name"
-                      id="name"
-                      autocomplete="off"
-                      required
-                    />
-                    <span class="label-up">Your name</span>
-                  </label>
+              <form
+                class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 w-7/12"
+              >
+                <!-- Name -->
+                <div class="identity-input mb-1">
+                  <label class="block text-gray-700 text-sm font-bold mb-2">
+                    Name</label
+                  >
+                  <input
+                    class="shadow appearance-none w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                    type="text"
+                    placeholder="Name"
+                    v-model="name"
+                  />
+                  <span class="text-xs text-red-700" id="emailHelp"></span>
                 </div>
-
-                <div class="form-group">
-                  <label>
-                    <input
-                      type="text"
-                      name="email"
-                      id="email"
-                      autocomplete="off"
-                      required
-                    />
-                    <span class="label-up">E-mail</span>
-                  </label>
+                <!-- Email -->
+                <div class="identity-input mb-1">
+                  <label class="block text-gray-700 text-sm font-bold mb-2">
+                    Email</label
+                  >
+                  <input
+                    id="identity"
+                    class="shadow appearance-none border-rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                    type="text"
+                    placeholder="Email"
+                    aria-describedby="emailHelp"
+                    v-model="email"
+                  />
+                  <span class="text-xs text-red-700" id="emailHelp"></span>
                 </div>
-
-                <div class="form-group">
-                  <label>
-                    <input
-                      type="text"
-                      name="phone"
-                      id="phone"
-                      autocomplete="off"
-                      required
-                    />
-                    <span class="label-up">Phone number</span>
-                  </label>
+                <!-- Subject -->
+                <div class="identity-input mb-1">
+                  <label
+                    for="identity"
+                    class="block text-gray-700 text-sm font-bold mb-2"
+                  >
+                    Subject</label
+                  >
+                  <input
+                    id="identity"
+                    class="shadow appearance-none borderrounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                    type="text"
+                    placeholder="Title"
+                    aria-describedby="emailHelp"
+                    v-model="subject"
+                  />
+                  <span class="text-xs text-red-700" id="emailHelp"></span>
                 </div>
+                <!-- Body -->
+                <div class="email-input mb-6">
+                  <label
+                    for="identity"
+                    class="block text-gray-700 text-sm font-bold mb-2"
+                    >Body</label
+                  >
 
-                <div class="form-group">
-                  <label>
-                    <input
-                      type="text"
-                      name="subject"
-                      id="subject"
-                      autocomplete="off"
-                      required
-                    />
-                    <span class="label-up">Subject</span>
-                  </label>
+                  <textarea
+                    aria-describedby="passwordHelp"
+                    v-model="body"
+                    class="shadow appearance-none borderrounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                    id="identity"
+                    type="text"
+                    placeholder="Message Content.."
+                  />
+
+                  <span class="text-xs text-red-700" id="passwordHelp"></span>
                 </div>
-
-                <div class="form-group">
-                  <label>
-                    <textarea
-                      name="message"
-                      id="message"
-                      autocomplete="off"
-                      required
-                    ></textarea>
-                    <span class="label-up">Message</span>
-                  </label>
-                </div>
-
-                <div class="form-group">
-                  <button id="submit" type="submit" name="submit">
-                    <strong>Send<b></b> <i></i></strong>
+                <!-- Send -->
+                <div class="custom-link form-group">
+                  <button
+                    class="rounded-lg"
+                    id="submit"
+                    type="submit"
+                    name="submit"
+                  >
+                    <strong class="rounded-lg">
+                      <router-link to="/contact"><p>Send</p></router-link>
+                      <b></b>
+                      <i></i>
+                    </strong>
                   </button>
                 </div>
               </form>
-
+              <!-- Success / Error Prompts -->
               <div class="form-group">
                 <div
                   id="success"

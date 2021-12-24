@@ -134,9 +134,7 @@
     <!-- About Intro -->
     <section class="w-full h-full flex-wrap p-12">
       <div class="">
-        <div
-          class="flex flex-row justify-center items-center xl:flex-row lg:flex-row md:flex-col-reverse flex-col-reverse"
-        >
+        <div class="flex flex-row justify-center items-center md:flex-row">
           <div class="basis-2/3 max-w-2/3">
             <h3
               class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-none pb-2 md:pb-6"
@@ -163,10 +161,10 @@
             </p>
           </div>
 
-          <div class="flex items-center justify-center place-">
+          <div class="flex items-center justify-center">
             <img
-              class="shadow-md object-contain rounded-2xl h-full w-full max-w-lg p-12 mb-12 -mt-28"
-              :src="images.imageOne"
+              class="bg-red-100 shadow-md object-contain rounded-full pb-32 mb-12 h-88 w-7/12"
+              :src="images.imageFive"
               alt="picture of Matthew"
             />
           </div>
@@ -460,6 +458,7 @@ export default {
         imageTwo: require("../assets/images/code.jpeg"),
         imageThree: require("../assets/logo.png"),
         imageFour: require("../assets/images/coder-zen.png"),
+        imageFive: require("../assets/images/matty-2.png"),
       },
       logos: {
         express: require("../assets/images/express-logo.png"),
