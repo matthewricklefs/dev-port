@@ -1,73 +1,55 @@
 <template>
-  <div class="theme-switch-wrapper" data-theme="light">
-    <!-- Navigation -->
-    <div class="navigation-menu" name="theme">
-      <div class="inner">
-        <div class="side-menu">
-          <ul>
-            <li>
-              <a href="about.html">About</a>
-            </li>
-            <li>
-              <a href="projects.html">Projects</a>
-            </li>
-            <li>
-              <a href="contact.html">Content</a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Ham Contents -->
-        <div class="sides">
-          <div>
-            <h1>Thanks for stopping by!</h1>
-            <p>
-              I'm currently open to new opportunities. If you think I might be a
-              good fit for your next project,
-              <a href="/contact.html" class="white-text">
-                <strong>let's chat!</strong>
-              </a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
+  <div
+    class="theme-switch-wrapper xl:p-40 lg:pl-36 md:pl-32 sm:pl-24 pl-14"
+    data-theme="light"
+  >
     <!-- Sidebar -->
-    <aside class="left-side">
-      <a href="" class="logo sticky">
-        <img :src="images.imageThree" alt="Matthew Ricklefs Logo" />
+    <aside
+      class="h-screen fixed left-0 top-0 flex items-center xl:w-36 lg:w-32 md:w-24 sm:w-16 w-12"
+    >
+      <a
+        href=""
+        class="w-full block h-10 text-center mt-8 transition-all ease-in-out opacity-0 transform translate-y-7"
+      >
+        <img
+          class="h-10"
+          :src="images.imageThree"
+          alt="Matthew Ricklefs Logo"
+        />
       </a>
-      <ul>
-        <li>
+
+      <ul
+        class="flex flex-row justify-center items-center w-full block leading-normal m-0 mt-36 -ml-2 p-0 transform -rotate-90 origin-center left-1/2 top-1/2 text-center"
+      >
+        <li class="text-sm p-2">
           <a href="https://www.linkedin.com/in/matthew-ricklefs-13284a1b9/">
             LINKEDIN
           </a>
         </li>
-        <li>
+
+        <li class="text-sm p-2">
           <a href="https://github.com/matthewricklefs">GITHUB</a>
         </li>
       </ul>
-      <a href="" class="gotop"> </a>
     </aside>
 
     <!-- Header -->
-    <header class="header">
-      <nav class="navbar">
+    <header class="w-full">
+      <nav class="w-full mb-0">
         <!-- Main Menu -->
         <div class="main-menu">
-          <ul>
-            <li>
+          <ul class="flex flex-row place-content-end">
+            <li class="text-sm p-2">
               <a>
                 <router-link to="/">Home</router-link>
               </a>
             </li>
-            <li>
+            <li class="text-sm p-2">
               <a>
                 <router-link to="/about">About</router-link>
               </a>
             </li>
-            <li>
+            <li class="text-sm p-2">
               <a>
                 <router-link to="/contact">Contact</router-link>
               </a>
@@ -76,28 +58,30 @@
         </div>
 
         <!-- Theme Switch -->
-        <label class="theme-switch" for="checkbox">
-          <input type="checkbox" id="checkbox" />
+        <label class="theme-switch pl-5 h-9 relative w-17" for="checkbox">
+          <input class="invisible" type="checkbox" id="checkbox" />
           <div @click="toggleSwitch" class="slider round"></div>
         </label>
       </nav>
 
       <!-- Page Title -->
-      <div class="page-title">
-        <div class="container">
-          <h2>About</h2>
-        </div>
+      <div class="w-full mt-12">
+        <h1
+          class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-none m-0 pb-1"
+        >
+          About
+        </h1>
       </div>
     </header>
 
     <!-- Page Title -->
-    <section class="page-header wave-section">
+    <section class="w-full flex flex-wrap wave-section p-6">
       <svg
+        class="pl-6 pr-6 pb-6 wave-top"
         width="100%"
         height="175"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        class="wave-top"
       >
         <path fill="white" data-theme="light">
           <animate
@@ -117,13 +101,14 @@
         </path>
       </svg>
 
-      <figure>
-        <img :src="images.imageTwo" alt="" />
+      <figure class="">
+        <img class="opacity-80 p-12 mb-2" :src="images.imageTwo" alt="" />
       </figure>
 
       <svg
+        class="pl-6 pr-6 pb-6"
         width="100%"
-        height="172"
+        height="249"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -147,11 +132,16 @@
     </section>
 
     <!-- About Intro -->
-    <section class="about-intro">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8">
-            <h3>Hello, I'm Matthew. I design and code for the web.</h3>
+    <section class="w-full h-full flex-wrap p-12">
+      <div class="">
+        <div class="flex flex-row justify-center items-center md:flex-row">
+          <div class="basis-2/3 max-w-2/3">
+            <h3
+              class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-none pb-2 md:pb-6"
+            >
+              Hello, I'm Matthew. I design and code for the web.
+            </h3>
+
             <div class="custom-link">
               <a
                 href="https://www.linkedin.com/in/matthew-ricklefs-13284a1b9/"
@@ -161,7 +151,8 @@
               >
               <span></span> <i></i>
             </div>
-            <p>
+
+            <p class="text-sm sm:text-lg pt-3">
               I'm a Full Stack Developer with a passion for developing beautiful
               and functional websites and applications. I have 2 years of
               experience designing for web but am most passionate about solving
@@ -170,134 +161,194 @@
             </p>
           </div>
 
-          <div class="col-md-4">
-            <picture>
-              <img
-                :src="images.imageOne"
-                alt="picture of Matthew"
-                class="matty-img"
-              />
-            </picture>
+          <div class="flex items-center justify-center">
+            <img
+              class="bg-red-100 shadow-md object-contain rounded-full pb-32 mb-12 h-88 w-7/12"
+              :src="images.imageFive"
+              alt="picture of Matthew"
+            />
           </div>
         </div>
       </div>
     </section>
 
     <!-- Skills ----------------------------- -->
-    <section class="featured-services">
+    <section class="p-12">
       <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="titles">
-              <h6>SKILLS</h6>
-              <p>
-                I love learning new things. Here are a few topics I am
-                proficient in:
-              </p>
-            </div>
-          </div>
+        <div class="col-12">
+          <h6
+            class="flex font-medium tracking-normal uppercase text-lg sm:text-xl"
+          >
+            SKILLS
+          </h6>
 
-          <div class="col-lg-3 col-md-6">
-            <figure class="reveal-effect masker wow">
-              <img :src="icons.ui" alt="ui design and planning icon" />
-              <figcaption>
-                <span>01</span>
-                <h4>UI DESIGN + PLANNING</h4>
-              </figcaption>
-            </figure>
-          </div>
+          <p class="tracking-wide mb-10 font-light text-sm sm:text-lg">
+            I love learning new things. Here are a few topics I am proficient
+            in:
+          </p>
+        </div>
 
-          <div class="col-lg-3 col-md-6">
-            <figure class="reveal-effect masker wow">
-              <img :src="icons.front" alt="front end development icon" />
-              <figcaption>
-                <span>02</span>
-                <h4>FRONT END DEVELOPMENT</h4>
-              </figcaption>
-            </figure>
-          </div>
+        <div
+          class="flex xl:flex-row lg:flex-row md:flex-row sm:flex-col flex-col"
+        >
+          <figure
+            class="flex flex-col h-full m-4 border-solid border-1 hover:blur-10 hover:opacity-5 transition-all delay-75"
+          >
+            <img
+              class="max-h-24 opacity-30 p-4 object-contain relative"
+              :src="icons.ui"
+              alt="ui design and planning icon"
+            />
+            <figcaption class="p-5 text-center">
+              <span class="text-md font-light mb-3">01</span>
+              <h4 class="text-lg font-semibold mb-0">UI DESIGN + PLANNING</h4>
+            </figcaption>
+          </figure>
 
-          <div class="col-lg-3 col-md-6">
-            <figure class="reveal-effect masker wow">
-              <img :src="icons.back" alt="back end development icon" />
-              <figcaption>
-                <span>03</span>
-                <h4>BACK END DEVELOPMENT</h4>
-              </figcaption>
-            </figure>
-          </div>
+          <figure
+            class="flex flex-col h-full m-4 border-solid border-1 hover:blur-10 hover:opacity-5 transition-all delay-75"
+          >
+            <img
+              class="max-h-24 opacity-30 p-4 object-contain relative"
+              :src="icons.front"
+              alt="front end development icon"
+            />
+            <figcaption class="p-5 text-center">
+              <span class="text-md font-light mb-3">02</span>
+              <h4 class="text-lg font-semibold mb-0">FRONT END DEVELOPMENT</h4>
+            </figcaption>
+          </figure>
 
-          <div class="col-lg-3 col-md-6">
-            <figure class="reveal-effect masker wow">
-              <img :src="icons.ux" alt="ux best practices icon" />
-              <figcaption>
-                <span>04</span>
-                <h4>UX BEST PRACTICES</h4>
-              </figcaption>
-            </figure>
-          </div>
+          <figure
+            class="flex flex-col h-full m-4 border-solid border-1 hover:blur-10 hover:opacity-5 transition-all delay-75"
+          >
+            <img
+              class="max-h-24 opacity-30 p-4 object-contain relative"
+              :src="icons.back"
+              alt="back end development icon"
+            />
+            <figcaption class="p-5 text-center">
+              <span class="text-md font-light mb-3">03</span>
+              <h4 class="text-lg font-semibold mb-0">BACK END DEVELOPMENT</h4>
+            </figcaption>
+          </figure>
+
+          <figure
+            class="flex flex-col h-full m-4 border-solid border-1 hover:blur-10 hover:opacity-5 transition-all delay-75"
+          >
+            <img
+              class="max-h-24 opacity-30 p-4 object-contain relative"
+              :src="icons.ux"
+              alt="ux best practices icon"
+            />
+            <figcaption class="p-5 text-center">
+              <span class="text-md font-light mb-3">04</span>
+              <h4 class="text-lg font-semibold mb-0">UX BEST PRACTICES</h4>
+            </figcaption>
+          </figure>
         </div>
       </div>
     </section>
 
     <!-- Technologies ------------------- -->
-    <section class="our-awards">
-      <div class="container">
-        <div class="titles">
-          <h6>TECHNOLOGIES</h6>
-          <p>Some tech I'm currently working with.</p>
+    <section class="w-full flex flex-col p-12">
+      <div class="w-full pr-4">
+        <div class="flex flex-col flex-wrap text-left w-full mb-20">
+          <h6
+            class="flex font-medium tracking-normal uppercase text-lg sm:text-xl"
+          >
+            TECHNOLOGIES
+          </h6>
+          <p class="tracking-wide mb-10 font-light text-sm sm:text-lg">
+            Some tech I'm currently working with.
+          </p>
         </div>
 
-        <ul class="about-tech">
-          <li class="wow fadeInUp" data-wow-delay="0.50s">
-            <figure>
-              <img :src="logos.vue" width="73" alt="react logo" />
-            </figure>
-            <!-- <h5>React</h5> -->
-          </li>
-
-          <li class="wow fadeInUp" data-wow-delay="0.60s">
-            <figure>
-              <img :src="logos.react" height="73" alt="redux logo" />
+        <ul class="flex flex-row w-3/4 text-center">
+          <li class="wow fadeInUp w-1/5 m-0 list-none" data-wow-delay="0.50s">
+            <figure class="w-full mb-10 items-center p-6">
+              <img
+                class="self-center"
+                :src="logos.vue"
+                width="73"
+                alt="react logo"
+              />
             </figure>
           </li>
 
-          <li class="wow fadeInUp" data-wow-delay="0.70s">
-            <figure>
-              <img :src="logos.mongo" width="73" alt="mongo logo" />
+          <li class="wow fadeInUp w-1/5 m-0 list-none" data-wow-delay="0.60s">
+            <figure class="w-full mb-10 items-center p-6">
+              <img
+                class="self-center"
+                :src="logos.react"
+                height="73"
+                alt="redux logo"
+              />
             </figure>
           </li>
 
-          <li class="wow fadeInUp" data-wow-delay="0.80s">
-            <figure>
-              <img :src="logos.express" height="73" alt="express logo" />
+          <li class="wow fadeInUp w-1/5 m-0 list-none" data-wow-delay="0.70s">
+            <figure class="w-full mb-10 items-center p-6">
+              <img
+                class="self-center"
+                :src="logos.mongo"
+                width="73"
+                alt="mongo logo"
+              />
             </figure>
           </li>
 
-          <li class="wow fadeInUp" data-wow-delay="0.90s">
-            <figure>
-              <img :src="logos.node" height="73" alt="node logo" />
+          <li class="wow fadeInUp w-1/5 m-0 list-none" data-wow-delay="0.80s">
+            <figure class="w-full mb-10 items-center p-6">
+              <img
+                class="self-center"
+                :src="logos.express"
+                height="73"
+                alt="express logo"
+              />
+            </figure>
+          </li>
+
+          <li class="wow fadeInUp w-1/5 m-0 list-none" data-wow-delay="0.90s">
+            <figure class="w-full mb-10 items-center p-6">
+              <img
+                class="self-center"
+                :src="logos.node"
+                height="73"
+                alt="node logo"
+              />
             </figure>
           </li>
         </ul>
 
-        <ul class="about-tech">
-          <li class="wow fadeInUp" data-wow-delay="1s">
-            <figure>
-              <img :src="logos.nuxt" width="73" alt="next logo" />
-            </figure>
-          </li>
-
-          <li class="wow fadeInUp" data-wow-delay="1.1s">
-            <figure>
-              <img :src="logos.next" width="73" height="73" alt="prisma logo" />
-            </figure>
-          </li>
-
-          <li class="wow fadeInUp" data-wow-delay="1.2s">
-            <figure>
+        <ul class="flex flex-row w-3/4 text-center">
+          <li class="wow fadeInUp w-1/5 m-0 list-none" data-wow-delay="1s">
+            <figure class="w-full mb-10 items-center p-6">
               <img
-                class="coder"
+                class="self-center"
+                :src="logos.nuxt"
+                width="73"
+                alt="next logo"
+              />
+            </figure>
+          </li>
+
+          <li class="wow fadeInUp w-1/5 m-0 list-none" data-wow-delay="1.1s">
+            <figure class="w-full mb-10 items-center p-6">
+              <img
+                class="self-center"
+                :src="logos.next"
+                width="73"
+                height="73"
+                alt="prisma logo"
+              />
+            </figure>
+          </li>
+
+          <li class="wow fadeInUp w-1/5 m-0 list-none" data-wow-delay="1.2s">
+            <figure class="w-full mb-10 items-center p-6">
+              <img
+                class="coder self-center"
                 :src="images.imageFour"
                 height="73"
                 alt="prisma logo"
@@ -305,15 +356,25 @@
             </figure>
           </li>
 
-          <li class="wow fadeInUp" data-wow-delay="1.3s">
-            <figure>
-              <img :src="logos.graphQl" height="73" alt="graphql logo" />
+          <li class="wow fadeInUp w-1/5 m-0 list-none" data-wow-delay="1.3s">
+            <figure class="w-full mb-10 items-center p-6">
+              <img
+                class="self-center"
+                :src="logos.graphQl"
+                height="73"
+                alt="graphql logo"
+              />
             </figure>
           </li>
 
-          <li class="wow fadeInUp" data-wow-delay="1.4s">
-            <figure>
-              <img :src="logos.aws" width="73" alt="gatsby logo" />
+          <li class="wow fadeInUp w-1/5 m-0 list-none" data-wow-delay="1.4s">
+            <figure class="w-full mb-10 items-center p-6">
+              <img
+                class="self-center"
+                :src="logos.aws"
+                width="73"
+                alt="gatsby logo"
+              />
             </figure>
           </li>
         </ul>
@@ -321,86 +382,63 @@
     </section>
 
     <!-- Explore Ideas -->
-    <section class="work-with-us">
+    <section class="p-12">
       <div class="container wow fadeInUp">
-        <h2
-          style="
-            font-size: 18px;
-            font-weight: 600;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-          "
-        >
+        <h2 class="flex font-thin tracking-normal uppercase text-lg sm:text-xl">
           EXPLORE IDEAS
         </h2>
-        <p
-          style="
-            font-size: 20px;
-            line-height: 1.5;
-            margin-bottom: 40px;
-            font-weight: 300;
-          "
-        >
+
+        <p class="tracking-wide mb-10 font-light text-sm sm:text-lg">
           Need a developer for your next project? Let's work together.
         </p>
-        <div class="custom-link">
-          <a>
-            <router-link to="/contact">Contact Me</router-link>
-          </a>
-          <span></span>
-          <i></i>
+
+        <div class="custom-link form-group">
+          <button class="rounded-lg" id="submit" type="submit" name="submit">
+            <strong class="rounded-lg">
+              <router-link to="/contact"><p>Contact Me</p></router-link>
+
+              <b></b>
+              <i></i>
+            </strong>
+          </button>
         </div>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="row-top">
+    <footer class="w-full md:p-24 sm:p-6 p-1">
+      <div class="flex flex-col justify-around items-center">
+        <div class="w-full flex flex-row sm:flex-row sm:justify-between">
           <div
-            class="footer-item wow fadeInUp"
+            class="w-full wow fadeInUp flex flex-col place-items-start"
             style="visibility: visible; animation-name: fadeInUp"
           >
-            <figure class="">
-              <router-link to="/">
-                <img :src="images.imageThree" alt="Matthew Ricklefs Logo"
-              /></router-link>
-            </figure>
-          </div>
+            <h5 class="sm:text-md text-sm">Location</h5>
 
-          <div
-            class="footer-item wow fadeInUp"
-            style="visibility: visible; animation-name: fadeInUp"
-          >
-            <h5>Location</h5>
-
-            <address>
-              Brooklyn,<br />
-              New York<br />
+            <address class="sm:text-sm text-xs">
+              Brooklyn, NY<br />
               USA
             </address>
           </div>
 
           <div
-            class="footer-item wow fadeInUp"
+            class="w-full flex flex-col place-items-end"
             style="visibility: visible; animation-name: fadeInUp"
           >
-            <h5>Say Hello</h5>
+            <h5 class="wow fadeInUp sm:text-md text-sm">Say Hello</h5>
 
-            <address>
-              <a>
-                <router-link to="/contact">Contact</router-link>
-              </a>
-            </address>
+            <a class="sm:text-sm text-xs">
+              <router-link to="/contact">Contact</router-link>
+            </a>
           </div>
         </div>
 
         <div
-          class="row-bottom"
+          class="w-full flex flex-row basis-1/3 flex-wrap sm:flex-col"
           style="visibility: visible; animation-name: fadeInUp"
         >
           <div>
-            <address>© 2021 Matthew Ricklefs - All rights Reserved.</address>
+            <address>© 2021 Matthew Ricklefs - All Rights Reserved.</address>
           </div>
         </div>
       </div>
@@ -420,6 +458,7 @@ export default {
         imageTwo: require("../assets/images/code.jpeg"),
         imageThree: require("../assets/logo.png"),
         imageFour: require("../assets/images/coder-zen.png"),
+        imageFive: require("../assets/images/matty-2.png"),
       },
       logos: {
         express: require("../assets/images/express-logo.png"),

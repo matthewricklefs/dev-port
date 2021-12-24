@@ -13,7 +13,6 @@
     </div>
 
     <div class="info">
-      
       <router-link to="#">
         View The Content
         <!-- <Arrow class="arrow" /> -->
@@ -23,12 +22,9 @@
 </template>
 
 <script>
-
-
 export default {
   name: "Card",
-  components: {
-  },
+  components: {},
   methods: {
     deletePost() {
       this.$store.dispatch();

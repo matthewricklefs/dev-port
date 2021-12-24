@@ -1,94 +1,55 @@
 <template>
-  <div class="theme-switch-wrapper" data-theme="light">
-    <!-- Preloader -->
-    <!-- <div class="preloader page-loaded"> -->
-    <!-- :: before -->
-    <!-- <div class="inner">
-        <figure class="logo">
-          <img src="" alt="logo" />
-        </figure>
-        <span class="percentage">1</span>
-      </div> -->
-    <!-- ::after -->
-    <!-- </div> -->
-
-    <!-- <div class="transition-overlay"> -->
-    <!-- ::before -->
-    <!-- </div> -->
-
-    <!-- Navigation -->
-    <div class="navigation-menu" name="theme">
-      <div class="inner">
-        <div class="side-menu">
-          <ul>
-            <li>
-              <a href="about.html">About</a>
-            </li>
-            <li>
-              <a href="projects.html">Projects</a>
-            </li>
-            <li>
-              <a href="contact.html">Content</a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Ham Contents -->
-        <div class="sides">
-          <div>
-            <h1>Thanks for stopping by!</h1>
-            <p>
-              I'm currently open to new opportunities. If you think I might be a
-              good fit for your next project,
-              <a href="/contact.html" class="white-text">
-                <strong>let's chat!</strong>
-              </a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
+  <div
+    class="theme-switch-wrapper xl:p-40 lg:pl-36 md:pl-32 sm:pl-24 pl-14"
+    data-theme="light"
+  >
     <!-- Sidebar -->
-    <aside class="left-side">
-      <a href="" class="logo sticky">
-        <img :src="images.imageThree" alt="Matthew Ricklefs Logo" />
+    <aside
+      class="h-screen fixed left-0 top-0 flex items-center xl:w-36 lg:w-32 md:w-24 sm:w-16 w-12"
+    >
+      <a
+        href=""
+        class="w-full block h-10 text-center mt-8 transition-all ease-in-out opacity-0 transform translate-y-7"
+      >
+        <img
+          class="h-10"
+          :src="images.imageThree"
+          alt="Matthew Ricklefs Logo"
+        />
       </a>
-      <ul>
-        <li>
+
+      <ul
+        class="flex flex-row justify-center items-center w-full block leading-normal m-0 mt-36 -ml-2 p-0 transform -rotate-90 origin-center left-1/2 top-1/2 text-center"
+      >
+        <li class="text-sm p-2">
           <a href="https://www.linkedin.com/in/matthew-ricklefs-13284a1b9/">
             LINKEDIN
           </a>
         </li>
-        <li>
+
+        <li class="text-sm p-2">
           <a href="https://github.com/matthewricklefs">GITHUB</a>
         </li>
       </ul>
-      <a href="" class="gotop"> </a>
     </aside>
 
     <!-- Header -->
-    <header class="header">
-      <nav class="navbar">
+    <header class="w-full">
+      <nav class="w-full mb-0">
         <!-- Main Menu -->
         <div class="main-menu">
-          <ul>
-            <li>
+          <ul class="flex flex-row place-content-end">
+            <li class="text-sm p-2">
               <a>
                 <router-link to="/">Home</router-link>
               </a>
             </li>
-            <li>
+            <li class="text-sm p-2">
               <a>
                 <router-link to="/about">About</router-link>
               </a>
             </li>
-            <!-- <li>
-              <a>
-                <router-link to="/projects">Projects</router-link>
-              </a>
-            </li> -->
-            <li>
+            <li class="text-sm p-2">
               <a>
                 <router-link to="/contact">Contact</router-link>
               </a>
@@ -96,78 +57,27 @@
           </ul>
         </div>
 
-        <!-- Hamburger Icon -->
-        <!-- <div class="hamburger-menu" id="hamburger-menu">
-          <div class="burger" @click.prevent="toggleTheme">
-            <svg
-              id="burger-svg"
-              data-name="Layer 1"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 50 50"
-            >
-              <title>Show / Hide Navigation</title>
-              <rect class="burger-svg__base" width="50" height="50"></rect>
-              <g class="burger-svg__bars">
-                <rect
-                  class="burger-svg__bar burger-svg__bar-1"
-                  x="14"
-                  y="18"
-                  width="22"
-                  height="2"
-                  data-svg-origin="25 19"
-                  style="
-                    transform: matrix(1, 0, 0, 1, 0, 0);
-                    transform-origin: 0px 0px 0px;
-                  "
-                ></rect>
-                <rect
-                  class="burger-svg__bar burger-svg__bar-2"
-                  x="14"
-                  y="24"
-                  width="22"
-                  height="2"
-                  data-svg-origin="25 25"
-                  style="
-                    transform-origin: 0px 0px 0px;
-                    transform: matrix(1, 0, 0, 1, 0, 0);
-                    opacity: 1;
-                  "
-                ></rect>
-                <rect
-                  class="burger-svg__bar burger-svg__bar-3"
-                  x="14"
-                  y="30"
-                  width="22"
-                  height="2"
-                  data-svg-origin="25 31"
-                  style="
-                    transform: matrix(1, 0, 0, 1, 0, 0);
-                    transform-origin: 0px 0px 0px;
-                  "
-                ></rect>
-              </g>
-            </svg>
-          </div>
-        </div> -->
-
         <!-- Theme Switch -->
-        <label class="theme-switch" for="checkbox">
-          <input type="checkbox" id="checkbox" />
+        <label class="theme-switch pl-5 h-9 relative w-17" for="checkbox">
+          <input class="invisible" type="checkbox" id="checkbox" />
           <div @click="toggleSwitch" class="slider round"></div>
         </label>
       </nav>
 
-      <!-- Page Title ------------------ -->
-      <div class="page-title">
-        <div class="container">
-          <h2>Contact</h2>
-        </div>
+      <!-- Page Title -->
+      <div class="w-full mt-12">
+        <h1
+          class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-none m-0 pb-1"
+        >
+          Contact
+        </h1>
       </div>
     </header>
 
     <!-- Map ------------------ -->
-    <section class="page-header">
+    <section class="w-full flex flex-wrap p-3 pr-6">
       <iframe
+        class="rounded-2xl m-1"
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96724.4207209076!2d-73.96888929428283!3d40.747987121652464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2588f046ee661%3A0xa0b3281fcecc08c!2sManhattan%2C%20New%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1639781504575!5m2!1sen!2sus"
         width="600"
         height="450"
@@ -178,106 +88,130 @@
     </section>
 
     <!-- Contact Details ------------------ -->
-    <section class="contact">
+    <section class="w-full flex flex-wrap pt-20">
+      <!-- TODO: Partial Cleanup with heading and paragraph tags -->
       <div class="container">
         <div class="row">
-          <div class="col-md-6 wow fadeInUp">
-            <h5>LOCATION</h5>
-            <address>
-              Brooklyn<br />
-              New York<br />
-              USA
+          <!-- Location -->
+          <div class="flex flex-col items-start justify-end wow fadeInUp">
+            <h5
+              class="flex font-medium tracking-normal uppercase text-lg sm:text-xl"
+            >
+              LOCATION
+            </h5>
+            <address class="tracking-wide mb-10 font-light text-sm sm:text-md">
+              Brooklyn, New York &nbsp;
             </address>
           </div>
-
-          <div class="col-12 wow fadeInUp">
-            <h5>REACH ME</h5>
+          <!-- Reach Me -->
+          <div class="flex flex-col items-start justify-end wow fadeInUp">
+            <h5
+              class="flex font-extralight tracking-normal uppercase text-lg sm:text-xl"
+            >
+              REACH ME
+            </h5>
             <a
-              class="btn-email"
+              class="tracking-wide mb-10 font-light text-sm sm:text-md"
               data-clipboard-text="ricklefsmatthew1003@gmail.com"
             >
               <span>Click</span> to copy my email address to your clipboard.
             </a>
           </div>
+          <!-- TODO: Implement Responsive Clean Form Submit -->
+          <!-- Form -->
+          <div class="wow fadeInUp p-4">
+            <div class="flex flex-col items-start w-full">
+              <h5
+                class="flex font-medium tracking-normal uppercase text-lg sm:text-xl"
+              >
+                CONTACT FORM
+              </h5>
 
-          <!-- Form ------------------ -->
-          <div class="col-lg-7 wow fadeInUp">
-            <div class="contact-form">
-              <h5>CONTACT FORM</h5>
-
-              <form id="contact" name="contact" method="post">
-                <input type="hidden" name="form-name" value="contact" />
-                <div class="form-group">
-                  <label>
-                    <input
-                      type="text"
-                      name="name"
-                      id="name"
-                      autocomplete="off"
-                      required
-                    />
-                    <span class="label-up">Your name</span>
-                  </label>
+              <form
+                class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 w-7/12"
+              >
+                <!-- Name -->
+                <div class="identity-input mb-1">
+                  <label class="block text-gray-700 text-sm font-bold mb-2">
+                    Name</label
+                  >
+                  <input
+                    class="shadow appearance-none w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                    type="text"
+                    placeholder="Name"
+                    v-model="name"
+                  />
+                  <span class="text-xs text-red-700" id="emailHelp"></span>
                 </div>
-
-                <div class="form-group">
-                  <label>
-                    <input
-                      type="text"
-                      name="email"
-                      id="email"
-                      autocomplete="off"
-                      required
-                    />
-                    <span class="label-up">E-mail</span>
-                  </label>
+                <!-- Email -->
+                <div class="identity-input mb-1">
+                  <label class="block text-gray-700 text-sm font-bold mb-2">
+                    Email</label
+                  >
+                  <input
+                    id="identity"
+                    class="shadow appearance-none border-rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                    type="text"
+                    placeholder="Email"
+                    aria-describedby="emailHelp"
+                    v-model="email"
+                  />
+                  <span class="text-xs text-red-700" id="emailHelp"></span>
                 </div>
-
-                <div class="form-group">
-                  <label>
-                    <input
-                      type="text"
-                      name="phone"
-                      id="phone"
-                      autocomplete="off"
-                      required
-                    />
-                    <span class="label-up">Phone number</span>
-                  </label>
+                <!-- Subject -->
+                <div class="identity-input mb-1">
+                  <label
+                    for="identity"
+                    class="block text-gray-700 text-sm font-bold mb-2"
+                  >
+                    Subject</label
+                  >
+                  <input
+                    id="identity"
+                    class="shadow appearance-none borderrounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                    type="text"
+                    placeholder="Title"
+                    aria-describedby="emailHelp"
+                    v-model="subject"
+                  />
+                  <span class="text-xs text-red-700" id="emailHelp"></span>
                 </div>
+                <!-- Body -->
+                <div class="email-input mb-6">
+                  <label
+                    for="identity"
+                    class="block text-gray-700 text-sm font-bold mb-2"
+                    >Body</label
+                  >
 
-                <div class="form-group">
-                  <label>
-                    <input
-                      type="text"
-                      name="subject"
-                      id="subject"
-                      autocomplete="off"
-                      required
-                    />
-                    <span class="label-up">Subject</span>
-                  </label>
+                  <textarea
+                    aria-describedby="passwordHelp"
+                    v-model="body"
+                    class="shadow appearance-none borderrounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                    id="identity"
+                    type="text"
+                    placeholder="Message Content.."
+                  />
+
+                  <span class="text-xs text-red-700" id="passwordHelp"></span>
                 </div>
-
-                <div class="form-group">
-                  <label>
-                    <textarea
-                      name="message"
-                      id="message"
-                      autocomplete="off"
-                      required
-                    ></textarea>
-                    <span class="label-up">Message</span>
-                  </label>
-                </div>
-
-                <div class="form-group">
-                  <button id="submit" type="submit" name="submit">
-                    <strong>Send<b></b> <i></i></strong>
+                <!-- Send -->
+                <div class="custom-link form-group">
+                  <button
+                    class="rounded-lg"
+                    id="submit"
+                    type="submit"
+                    name="submit"
+                  >
+                    <strong class="rounded-lg">
+                      <router-link to="/contact"><p>Send</p></router-link>
+                      <b></b>
+                      <i></i>
+                    </strong>
                   </button>
                 </div>
               </form>
-
+              <!-- Success / Error Prompts -->
               <div class="form-group">
                 <div
                   id="success"
@@ -303,68 +237,14 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="row-top">
-          <div
-            class="footer-item wow fadeInUp"
-            style="visibility: visible; animation-name: fadeInUp"
-          >
-            <figure class="logo sticky">
-              <router-link to="/">
-                <img :src="images.imageThree" alt="Matthew Ricklefs Logo"
-              /></router-link>
-            </figure>
-          </div>
-
-          <div
-            class="footer-item wow fadeInUp"
-            style="visibility: visible; animation-name: fadeInUp"
-          >
-            <h5>Location</h5>
-
-            <address>
-              Brooklyn,<br />
-              New York<br />
-              USA
-            </address>
-          </div>
-
-          <div
-            class="footer-item wow fadeInUp"
-            style="visibility: visible; animation-name: fadeInUp"
-          >
-            <h5>Say Hello</h5>
-
-            <address>
-              <a>
-                <router-link to="/contact">Contact</router-link>
-              </a>
-            </address>
-          </div>
-        </div>
-
+    <footer class="w-full md:p-24 sm:p-6 p-1">
+      <div class="flex flex-col justify-around items-center">
         <div
-          class="row-bottom"
+          class="w-full flex flex-row basis-1/3 flex-wrap sm:flex-col"
           style="visibility: visible; animation-name: fadeInUp"
         >
-          <div class="wow fadeInUp">
-            <ul>
-              <li>
-                <a>
-                  <router-link to="/">Home</router-link>
-                </a>
-              </li>
-              <li>
-                <a>
-                  <router-link to="/about">About</router-link>
-                </a>
-              </li>
-            </ul>
-          </div>
-
           <div>
-            <address>© 2021 Matthew Ricklefs - All rights Reserved.</address>
+            <address>© 2021 Matthew Ricklefs - All Rights Reserved.</address>
           </div>
         </div>
       </div>
